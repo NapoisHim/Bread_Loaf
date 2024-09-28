@@ -1,0 +1,43 @@
+// Deontae Riley - CSC114-404 Computer Science I (Fall 2024 S1) - 9/28/23 - Module 3, Assignment: Vars & Data Types
+// I have provided citations where appropriate
+#include <iostream>
+using namespace std;
+
+int main() {
+  // Amount of ingredients for one loaf
+  int flour, salt, yeast, water;
+  cout << "How many grams of flour, salt, yeast, and water does this bread recipe require for each loaf? "
+       << "Provide each amount separated by a space and press enter: ";
+  cin >> flour >> salt >> yeast >> water;
+
+  // Number of loaves to make
+  int numLoaves;
+  cout << "How many loaves of bread do you want to make? ";
+  cin >> numLoaves;
+
+  // Calculate and display total ingredients
+  if (numLoaves > 1) {
+    // Calculate the total amount of ingredients needed
+    int totalFlour = flour * numLoaves;
+    int totalSalt = salt * numLoaves;
+    int totalYeast = yeast * numLoaves;
+    int totalWater = water * numLoaves;
+
+    // Display results
+    // Heavily inspired by Chat GPT
+    cout << "\nIn order to make " << numLoaves << " loaves, you will need:\n";
+    cout << "  - " << totalFlour << " grams of flour\n";
+    cout << "  - " << totalSalt << " grams of salt\n";
+    cout << "  - " << totalYeast << " grams of yeast\n";
+    cout << "  - " << totalWater << " grams of water\n";
+  } else {
+    // If only baking one loaf, just display original amounts
+    cout << "\nIn order to make " << numLoaves << " loaf, you will need:\n";
+    cout << "  - " << flour << " grams of flour\n";
+    cout << "  - " << salt << " grams of salt\n";
+    cout << "  - " << yeast << " grams of yeast\n";
+    cout << "  - " << water << " grams of water\n";
+  }
+
+  return 0;
+}
